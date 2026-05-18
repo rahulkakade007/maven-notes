@@ -1,5 +1,51 @@
-What is maven?
+What is Maven?
+(Maven is a build automation and project management tool mainly used for Java projects.)
 
+Maven is used because it automates project build processes, manages dependencies, provides a standard project structure, and simplifies development and deployment.
+
+mvn vs ant vs gradle?
+Ant is task-driven and requires manual configuration. 
+Maven provides dependency management and standard project structure. 
+Gradle is more flexible and faster, with modern build features like incremental builds and better performance.
+
+build life cycle?
+| Phase        | Purpose                                                            |
+| ------------ | ------------------------------------------------------------------ |
+| **validate** | Checks whether the project structure and configuration are correct |
+| **compile**  | Compiles Java source code into `.class` files                      |
+| **test**     | Runs unit tests                                                    |
+| **package**  | Packages code into formats like JAR or WAR                         |
+| **verify**   | Performs additional checks on the package                          |
+| **install**  | Stores the package in the local Maven repository                   |
+| **deploy**   | Uploads the package to a remote repository                         |
+
+imp->  mvn side - Generates project documentation
+
+
+mvn architecture?
+
+Developer
+    ↓
+pom.xml
+    ↓
+Maven Core
+    ↓
+Checks Local Repository (.m2)
+    ↓
+If dependency not found
+    ↓
+Remote Repository (Maven Central)
+    ↓
+Downloads dependency
+    ↓
+Stores in Local Repository
+    ↓
+Executes plugins and lifecycle
+    ↓
+Creates JAR/WAR
+
+
+Use of Maven?
 - Build Management: Maven handles compiling, testing, packaging, and deploying code. It automates the build process
 - Dependency Management: Maven automatically manages external libraries or dependencies that a project needs
 - Project Structure: Maven enforces a standard directory structure for projects, making it easier for developers to understand how a project is organized, regardless of who wrote the code
@@ -132,6 +178,15 @@ With exclusion
 
 Note:
 These Spring Boot starter dependencies are a special type of dependency provided by Spring Boot that bundle several related dependencies together for convenience.
+
+
+plugins:Maven plugins are components that perform specific tasks such as compilation, testing, packaging, and deployment during the Maven build lifecycle.
+
+1. The Maven Compiler Plugin is used to compile Java source code during the compile phase and convert .java files into .class files based on the configured Java version.
+2. The Maven JAR Plugin is used to package compiled Java classes and resources into a .jar file during the package phase of the Maven lifecycle.
+3. Maven Surefire Plugin is used to execute unit tests during the test phase of the Maven lifecycle and generate test execution reports automatically.
+4. The Maven WAR Plugin is used to package Java web applications into a .war file during the package phase so they can be deployed to application servers.
+5. The Maven Clean Plugin is used to delete previously generated build files (mainly the target directory) and prepare the project for a fresh build.
 
 
 

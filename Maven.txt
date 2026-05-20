@@ -105,8 +105,7 @@ RELEASE: This version has been finalized and is ready for production or delivery
 Note: Artifacts are stored in repositories (like Maven Central or private repositories(NEXUS / JFROG)) and can be dependencies for other project
 
 What are the types of Repositories?
-
-
+(A Maven repository is a storage location from which Maven downloads and manages project dependencies, plugins, and build artifacts)
 There are three types of repositories:
 
 1. Central Repository (Public): This is the default public repository provided by Maven, containing a huge collection of popular libraries and frameworks. When you declare a dependency in your pom.xml, Maven looks here first.
